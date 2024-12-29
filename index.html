@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profesjonalny montaż kuchni IKEA - realizacje, opinie klientów i bezpłatna wycena">
+    <title>Kuchnie IKEA | Profesjonalny montaż i aranżacja</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">KuchniaIKEA</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+            <div class="nav-links">
+                <a href="#realizacje">Realizacje</a>
+                <a href="#oferta">Oferta</a>
+                <a href="#opinie">Opinie</a>
+                <a href="#kontakt">Kontakt</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Profesjonalny montaż kuchni IKEA</h1>
+            <p>Zrealizuj swoje marzenie o idealnej kuchni</p>
+            <a href="#kontakt" class="cta-button">Bezpłatna wycena</a>
+        </section>
+
+        <section id="realizacje" class="before-after-section">
+            <h2>Nasze realizacje</h2>
+            <div class="slider-container">
+                <img src="before.jpg" alt="Kuchnia przed remontem" class="before-image">
+                <img src="after.jpg" alt="Kuchnia po remoncie" class="after-image">
+                <input type="range" min="0" max="100" value="50" class="slider" aria-label="Suwak przed/po">
+            </div>
+        </section>
+
+        <section id="opinie" class="reviews">
+            <h2>Opinie naszych klientów</h2>
+            <div class="review-form">
+                <div class="stars" role="group" aria-label="Ocena w gwiazdkach">
+                    <span class="star" data-value="1" tabindex="0">★</span>
+                    <span class="star" data-value="2" tabindex="0">★</span>
+                    <span class="star" data-value="3" tabindex="0">★</span>
+                    <span class="star" data-value="4" tabindex="0">★</span>
+                    <span class="star" data-value="5" tabindex="0">★</span>
+                </div>
+                <textarea placeholder="Twoja opinia..." aria-label="Pole na opinię"></textarea>
+                <button type="button" onclick="addReview()">Dodaj opinię</button>
+            </div>
+            <div id="reviews-list" class="reviews-grid"></div>
+        </section>
+
+        <section id="kontakt" class="contact">
+            <h2>Skontaktuj się z nami</h2>
+            <div class="contact-options">
+                <div class="contact-info">
+                    <a href="tel:+48123456789" class="phone-button">
+                        📞 Zadzwoń teraz: +48 123 456 789
+                    </a>
+                    <p>lub</p>
+                    <a href="mailto:kontakt@kuchniaikea.pl">kontakt@kuchniaikea.pl</a>
+                </div>
+                <form id="contact-form" method="POST" action="/send-message">
+                    <div class="form-group">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Wiadomość</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Wyślij wiadomość</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 KuchniaIKEA. Wszystkie prawa zastrzeżone.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="Instagram">IG</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
